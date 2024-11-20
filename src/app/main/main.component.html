@@ -1,0 +1,24 @@
+<ng-container *ngIf="isLoading;then loading; else DataLoaded"></ng-container>
+<ng-template #loading>
+  <p>Loading....</p>
+</ng-template>
+<ng-template #DataLoaded>
+  <section class="d-flex flex-row justify-content-center align-items-center gap-2 p-2 flex-wrap">
+    <div class="card todo-container pop-up" [class]="(isShown && selectedTodo?.id === item.id) ? 'shown' : 'hidden'" *ngFor="let item of todos" (click)="setTodo(item.id)">
+      <button class="btn btn-close bg-danger text-light" (click)="closeModal($event)"></button>
+      <div class="card-header">
+        <p>{{item.title.slice(0,20)}}...</p>
+      </div>
+        <div class="card-body">
+          <p>{{item.id}}</p>
+          <ng-container *ngIf="item.completed; then completed; else notCompleted"></ng-container>
+          <ng-template #completed>
+            <p class="text-success">Completed</p>
+          </ng-template>
+          <ng-template #notCompleted>
+            <p class="text-danger">Not Completed</p>
+          </ng-template>
+        </div>
+    </div>
+  </section>
+</ng-template>

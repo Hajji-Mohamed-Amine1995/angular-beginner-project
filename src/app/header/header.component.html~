@@ -1,0 +1,32 @@
+<header class="d-flex flex-row justify-content-evenly align-content-center gap-2 p-1 sticky-top bg-dark">
+  <a routerLink="/" class="d-flex flex-row justify-content-center align-items-center gap-2 p-1 nav-link">
+    <img src="/assets/business-task-list.svg" alt="" width="50" height="50"/>
+    <h2 class="text-light text-light">{{ title }}</h2>
+  </a>
+  <nav class="navbar navbar-expand-sm">
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a routerLink="/home" class="nav-link text-light d-flex flex-row justify-content-center align-items-center p-2 gap-2"><ng-icon size="25" name="heroHome"></ng-icon><span>Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" class="nav-link text-light d-flex flex-row justify-content-center align-items-center p-2 gap-2"><ng-icon size="25" name="ionInformationCircle"></ng-icon><span>about</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/community" class="nav-link text-light d-flex flex-row justify-content-center align-items-center p-2 gap-2"><ng-icon size="25" name="ionPeople"></ng-icon><span>community</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/login" class="nav-link text-light d-flex flex-row justify-content-center align-items-center p-2 gap-2"><ng-icon size="25" name="ionLogInOutline"></ng-icon><span>login</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/register" class="nav-link text-light d-flex flex-row justify-content-center align-items-center p-2 gap-2"><span>register</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

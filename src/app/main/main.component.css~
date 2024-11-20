@@ -1,0 +1,20 @@
+div.todo-container{
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  cursor: pointer;
+}
+div.pop-up.shown{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: position .25s ease-in-out;
+  box-shadow: 0 0 15px 10px rgba(40,40,40,0.25);
+  padding: 10px;
+}
+div.pop-up.hidden{
+  position: static;
+  transition: position .25s ease-in-out;
+}
